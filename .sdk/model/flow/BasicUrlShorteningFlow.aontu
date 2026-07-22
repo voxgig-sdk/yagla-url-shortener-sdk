@@ -1,0 +1,18 @@
+# BasicUrlShorteningFlow
+
+main: kit: flow: BasicUrlShorteningFlow:
+{
+  entity: "url_shortening",
+  kind: "basic",
+  name: "BasicUrlShorteningFlow",
+  step: [
+    {
+      input: {
+        ref: "url_shortening_ref01"
+      }
+
+      op: "create"
+    }
+  ],
+  "key$": "BasicUrlShorteningFlow"
+}

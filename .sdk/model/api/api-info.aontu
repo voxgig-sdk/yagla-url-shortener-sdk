@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/yagla"
+      }
+      description: "Yagla is a simple and free tool provided by Vitamin.tools that allows users to shorten long URLs easily. It serves as a web API for generating shorter links, enabling better link management and sharing. Perfect for those looking to simplify sharing lengthy web addresses."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://yagla.ru"
+        }
+      ]
+      summary: "Yagla is a simple and free tool provided by Vitamin.tools that allows users to shorten long URLs easily."
+      title: "Yagla URL Shortener"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/yagla"
+    }
+  }
+}
+

@@ -1,0 +1,149 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Yagla URL Shortener",
+    "description": "Yagla is a simple and free tool provided by Vitamin.tools that allows users to shorten long URLs easily. It serves as a web API for generating shorter links, enabling better link management and sharing. Perfect for those looking to simplify sharing lengthy web addresses.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/yagla"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://yagla.ru",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/tools/generateShortLink": {
+      "post": {
+        "summary": "Generate Short Link",
+        "description": "Generate a shortened URL from a long URL. This endpoint accepts a URL and returns a shortened version for easier sharing and link management.",
+        "operationId": "generateShortLink",
+        "tags": [
+          "URL Shortening"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "link"
+                ],
+                "properties": {
+                  "link": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "The long URL to be shortened",
+                    "example": "http://tvs.tv"
+                  }
+                }
+              },
+              "examples": {
+                "example1": {
+                  "summary": "Example URL shortening request",
+                  "value": {
+                    "link": "http://tvs.tv"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully generated short link",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "shortLink": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "The generated short URL"
+                    },
+                    "originalLink": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "The original long URL"
+                    }
+                  }
+                },
+                "examples": {
+                  "example1": {
+                    "summary": "Successful response",
+                    "value": {
+                      "shortLink": "https://yagla.ru/abc123",
+                      "originalLink": "http://tvs.tv"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Invalid URL or missing parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message describing what went wrong"
+                    }
+                  }
+                },
+                "examples": {
+                  "example1": {
+                    "summary": "Invalid URL",
+                    "value": {
+                      "error": "Invalid URL provided"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error - Something went wrong on the server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                },
+                "examples": {
+                  "example1": {
+                    "summary": "Server error",
+                    "value": {
+                      "error": "Internal server error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "URL Shortening",
+      "description": "Operations for shortening URLs"
+    }
+  ],
+  "externalDocs": {
+    "description": "GitHub Repository with API documentation and examples",
+    "url": "https://github.com/l0v3m0n3y/yagla"
+  }
+}
