@@ -33,14 +33,14 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"active": true,
-						"name": "original_link",
+						"name": "originalLink",
 						"req": false,
 						"type": "`$STRING`",
 						"index$": 1,
 					},
 					map[string]any{
 						"active": true,
-						"name": "short_link",
+						"name": "shortLink",
 						"req": false,
 						"type": "`$STRING`",
 						"index$": 2,
@@ -55,6 +55,7 @@ func MakeConfig() map[string]any {
 							map[string]any{
 								"active": true,
 								"args": map[string]any{},
+								"kind": "http",
 								"method": "POST",
 								"orig": "/tools/generateShortLink",
 								"parts": []any{
@@ -69,7 +70,6 @@ func MakeConfig() map[string]any {
 								"index$": 0,
 							},
 						},
-						"key$": "create",
 					},
 				},
 				"relations": map[string]any{

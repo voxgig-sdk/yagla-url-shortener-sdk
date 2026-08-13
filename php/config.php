@@ -39,14 +39,14 @@ class YaglaUrlShortenerConfig
             ],
             [
               'active' => true,
-              'name' => 'original_link',
+              'name' => 'originalLink',
               'req' => false,
               'type' => '`$STRING`',
               'index$' => 1,
             ],
             [
               'active' => true,
-              'name' => 'short_link',
+              'name' => 'shortLink',
               'req' => false,
               'type' => '`$STRING`',
               'index$' => 2,
@@ -61,6 +61,7 @@ class YaglaUrlShortenerConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'POST',
                   'orig' => '/tools/generateShortLink',
                   'parts' => [

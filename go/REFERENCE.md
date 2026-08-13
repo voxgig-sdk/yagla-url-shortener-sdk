@@ -99,8 +99,8 @@ fmt.Println(urlShortening.GetName()) // "url_shortening"
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `link` | `string` | Yes |  |
-| `original_link` | `string` | No |  |
-| `short_link` | `string` | No |  |
+| `originalLink` | `string` | No |  |
+| `shortLink` | `string` | No |  |
 
 ### Operations
 

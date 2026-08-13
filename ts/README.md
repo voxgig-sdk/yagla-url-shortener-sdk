@@ -36,7 +36,7 @@ const client = new YaglaUrlShortenerSDK()
 ### 4. Create, update, and remove
 
 ```ts
-// Create — returns the created UrlShortening
+// Create — returns the created UrlShortening ENTITY (.data() for the record)
 const created = await client.UrlShortening().create({
   link: 'example_link',
 })
@@ -118,7 +118,8 @@ Create a mock client for unit testing — no server required:
 const client = YaglaUrlShortenerSDK.test()
 
 const urlshortening = await client.UrlShortening().create({ link: 'example_link' })
-// urlshortening is a bare entity populated with mock response data
+// urlshortening is the entity, populated with mock response data
+// — call urlshortening.data() for the record itself
 console.log(urlshortening)
 ```
 
@@ -282,8 +283,8 @@ The `prepare()` method returns:
 | Field | Description |
 | --- | --- |
 | `link` |  |
-| `original_link` |  |
-| `short_link` |  |
+| `originalLink` |  |
+| `shortLink` |  |
 
 Operations: create.
 
@@ -309,8 +310,8 @@ Create an instance: `const url_shortening = client.UrlShortening()`
 | Field | Type | Description |
 | --- | --- | --- |
 | `link` | `string` |  |
-| `original_link` | `string` |  |
-| `short_link` | `string` |  |
+| `originalLink` | `string` |  |
+| `shortLink` | `string` |  |
 
 #### Example: Create
 

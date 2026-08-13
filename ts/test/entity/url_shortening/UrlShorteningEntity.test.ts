@@ -26,8 +26,8 @@ import {
 describe('UrlShorteningEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when YAGLAURLSHORTENER_TEST_LIVE=TRUE.
-  afterEach(liveDelay('YAGLAURLSHORTENER_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when YAGLA_URL_SHORTENER_TEST_LIVE=TRUE.
+  afterEach(liveDelay('YAGLA_URL_SHORTENER_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = YaglaUrlShortenerSDK.test()
@@ -62,7 +62,7 @@ describe('UrlShorteningEntity', async () => {
     const url_shortening_ref01_ent = client.UrlShortening()
     let url_shortening_ref01_data = setup.data.new.url_shortening['url_shortening_ref01']
 
-    url_shortening_ref01_data = await url_shortening_ref01_ent.create(url_shortening_ref01_data)
+    url_shortening_ref01_data = (await url_shortening_ref01_ent.create(url_shortening_ref01_data)).data()
     assert(null != url_shortening_ref01_data)
 
 

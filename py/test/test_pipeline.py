@@ -16,11 +16,11 @@
 import pytest
 
 from yaglaurlshortener_sdk import YaglaUrlShortenerSDK
-from core.error import YaglaUrlShortenerError
-from core.result import YaglaUrlShortenerResult
-from core.response import YaglaUrlShortenerResponse
-from core.spec import YaglaUrlShortenerSpec
-from feature.base_feature import YaglaUrlShortenerBaseFeature
+from yaglaurlshortener_sdk.core.error import YaglaUrlShortenerError
+from yaglaurlshortener_sdk.core.result import YaglaUrlShortenerResult
+from yaglaurlshortener_sdk.core.response import YaglaUrlShortenerResponse
+from yaglaurlshortener_sdk.core.spec import YaglaUrlShortenerSpec
+from yaglaurlshortener_sdk.feature.base_feature import YaglaUrlShortenerBaseFeature
 
 
 def _client():

@@ -3,20 +3,20 @@
     "url_shortening": {
       "URL_SHORTENING00": {
         "link": "s1e",
-        "original_link": "s1f",
-        "short_link": "s20",
+        "originalLink": "s1f",
+        "shortLink": "s20",
         "id": "URL_SHORTENING00"
       },
       "URL_SHORTENING01": {
         "link": "s3c",
-        "original_link": "s3d",
-        "short_link": "s3e",
+        "originalLink": "s3d",
+        "shortLink": "s3e",
         "id": "URL_SHORTENING01"
       },
       "URL_SHORTENING02": {
         "link": "s5a",
-        "original_link": "s5b",
-        "short_link": "s5c",
+        "originalLink": "s5b",
+        "shortLink": "s5c",
         "id": "URL_SHORTENING02"
       }
     }
@@ -25,8 +25,8 @@
     "url_shortening": {
       "url_shortening_ref01": {
         "link": "s78",
-        "original_link": "s79",
-        "short_link": "s7a"
+        "originalLink": "s79",
+        "shortLink": "s7a"
       }
     }
   }

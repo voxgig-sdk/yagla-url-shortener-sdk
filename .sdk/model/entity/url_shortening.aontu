@@ -11,12 +11,12 @@ main: kit: entity: url_shortening: {
       type: "`$STRING`"
     }
     {
-      name: "original_link"
+      name: "originalLink"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "short_link"
+      name: "shortLink"
       req: false
       type: "`$STRING`"
     }

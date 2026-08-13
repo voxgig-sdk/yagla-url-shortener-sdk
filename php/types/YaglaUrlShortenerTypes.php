@@ -16,15 +16,15 @@ declare(strict_types=1);
 class UrlShortening
 {
     public string $link;
-    public ?string $original_link = null;
-    public ?string $short_link = null;
+    public ?string $originalLink = null;
+    public ?string $shortLink = null;
 }
 
 /** Request payload for UrlShortening#create. */
 class UrlShorteningCreateData
 {
     public string $link;
-    public ?string $original_link = null;
-    public ?string $short_link = null;
+    public ?string $originalLink = null;
+    public ?string $shortLink = null;
 }
 

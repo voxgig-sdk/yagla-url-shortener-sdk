@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import YaglaUrlShortenerControl
-from core.error import YaglaUrlShortenerError
-from core.result import YaglaUrlShortenerResult
-from core.spec import YaglaUrlShortenerSpec
+from projectname_sdk.config import make_config
+from projectname_sdk.features import _make_feature
+from projectname_sdk.core.control import YaglaUrlShortenerControl
+from projectname_sdk.core.error import YaglaUrlShortenerError
+from projectname_sdk.core.result import YaglaUrlShortenerResult
+from projectname_sdk.core.spec import YaglaUrlShortenerSpec
 
 
 # True when this SDK was generated with the named feature.

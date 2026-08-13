@@ -8,13 +8,13 @@
 
 ---@class UrlShortening
 ---@field link string
----@field original_link? string
----@field short_link? string
+---@field originalLink? string
+---@field shortLink? string
 
 ---@class UrlShorteningCreateData
 ---@field link string
----@field original_link? string
----@field short_link? string
+---@field originalLink? string
+---@field shortLink? string
 
 local M = {}
 

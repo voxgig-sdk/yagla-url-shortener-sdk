@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# YaglaUrlShortener SDK exists test
 
 import pytest
 from yaglaurlshortener_sdk import YaglaUrlShortenerSDK

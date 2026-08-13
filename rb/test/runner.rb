@@ -23,8 +23,8 @@ module YaglaUrlShortenerTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("YAGLAURLSHORTENER_TEST_LIVE")
-    override = getenv("YAGLAURLSHORTENER_TEST_OVERRIDE")
+    live = getenv("YAGLA_URL_SHORTENER_TEST_LIVE")
+    override = getenv("YAGLA_URL_SHORTENER_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module YaglaUrlShortenerTestRunner
       end
     end
 
-    explain = getenv("YAGLAURLSHORTENER_TEST_EXPLAIN")
-    m["YAGLAURLSHORTENER_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("YAGLA_URL_SHORTENER_TEST_EXPLAIN")
+    m["YAGLA_URL_SHORTENER_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

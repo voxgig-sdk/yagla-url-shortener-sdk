@@ -7,13 +7,13 @@
 
 export interface UrlShortening {
   link: string
-  original_link?: string
-  short_link?: string
+  originalLink?: string
+  shortLink?: string
 }
 
 export interface UrlShorteningCreateData {
   link: string
-  original_link?: string
-  short_link?: string
+  originalLink?: string
+  shortLink?: string
 }
 

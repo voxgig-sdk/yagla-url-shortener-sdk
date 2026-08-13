@@ -94,8 +94,8 @@ url_shortening = client.UrlShortening
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `link` | `String` | Yes |  |
-| `original_link` | `String` | No |  |
-| `short_link` | `String` | No |  |
+| `originalLink` | `String` | No |  |
+| `shortLink` | `String` | No |  |
 
 ### Operations
 

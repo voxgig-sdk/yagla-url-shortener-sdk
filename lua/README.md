@@ -213,9 +213,9 @@ data **directly** — there is no wrapper:
 
 Check `err` first (it is non-`nil` on failure), then use `value`:
 
-    local url_shortening, err = client:UrlShortening():load()
+    local url_shortening, err = client:UrlShortening():list()
     if err then error(err) end
-    -- url_shortening is the loaded record
+    -- url_shortening is the record list
 
 Only `direct()` returns a response envelope — a `table` with `ok`,
 `status`, `headers`, and `data` keys.
@@ -227,8 +227,8 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 | Field | Description |
 | --- | --- |
 | `link` |  |
-| `original_link` |  |
-| `short_link` |  |
+| `originalLink` |  |
+| `shortLink` |  |
 
 Operations: Create.
 
@@ -254,8 +254,8 @@ Create an instance: `local url_shortening = client:UrlShortening(nil)`
 | Field | Type | Description |
 | --- | --- | --- |
 | `link` | `string` |  |
-| `original_link` | `string` |  |
-| `short_link` | `string` |  |
+| `originalLink` | `string` |  |
+| `shortLink` | `string` |  |
 
 #### Example: Create
 

@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ YaglaUrlShortenerUtility.registrar = ->(u) {
   u.prepare_params = YaglaUrlShortenerUtilities::PrepareParams
   u.prepare_path = YaglaUrlShortenerUtilities::PreparePath
   u.prepare_query = YaglaUrlShortenerUtilities::PrepareQuery
+  u.graphql_body = YaglaUrlShortenerUtilities::GraphqlBody
+  u.graphql_errors = YaglaUrlShortenerUtilities::GraphqlErrors
   u.result_basic = YaglaUrlShortenerUtilities::ResultBasic
   u.result_body = YaglaUrlShortenerUtilities::ResultBody
   u.result_headers = YaglaUrlShortenerUtilities::ResultHeaders

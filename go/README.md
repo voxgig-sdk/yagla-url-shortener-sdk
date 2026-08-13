@@ -259,8 +259,8 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 | Field | Description |
 | --- | --- |
 | `"link"` |  |
-| `"original_link"` |  |
-| `"short_link"` |  |
+| `"originalLink"` |  |
+| `"shortLink"` |  |
 
 Operations: Create.
 
@@ -286,8 +286,8 @@ Create an instance: `urlShortening := client.UrlShortening(nil)`
 | Field | Type | Description |
 | --- | --- | --- |
 | `link` | `string` |  |
-| `original_link` | `string` |  |
-| `short_link` | `string` |  |
+| `originalLink` | `string` |  |
+| `shortLink` | `string` |  |
 
 #### Example: Create
 

@@ -13,15 +13,15 @@
 # @!attribute [rw] link
 #   @return [String]
 #
-# @!attribute [rw] original_link
+# @!attribute [rw] originalLink
 #   @return [String, nil]
 #
-# @!attribute [rw] short_link
+# @!attribute [rw] shortLink
 #   @return [String, nil]
 UrlShortening = Struct.new(
   :link,
-  :original_link,
-  :short_link,
+  :originalLink,
+  :shortLink,
   keyword_init: true
 )
 
@@ -30,15 +30,15 @@ UrlShortening = Struct.new(
 # @!attribute [rw] link
 #   @return [String]
 #
-# @!attribute [rw] original_link
+# @!attribute [rw] originalLink
 #   @return [String, nil]
 #
-# @!attribute [rw] short_link
+# @!attribute [rw] shortLink
 #   @return [String, nil]
 UrlShorteningCreateData = Struct.new(
   :link,
-  :original_link,
-  :short_link,
+  :originalLink,
+  :shortLink,
   keyword_init: true
 )
 

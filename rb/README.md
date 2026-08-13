@@ -33,7 +33,7 @@ client = YaglaUrlShortenerSDK.new
 ### 4. Create, update, and remove
 
 ```ruby
-# create returns the bare created UrlShortening record.
+# create returns the ENTITY — call data_get for the created UrlShortening record.
 created = client.UrlShortening.create({ "link" => "example_link" })
 
 ```
@@ -113,7 +113,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = YaglaUrlShortenerSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 urlshortening = client.UrlShortening.create({ "link" => "example" })
 puts urlshortening
 ```
@@ -231,8 +232,8 @@ returns a result `Hash` with these keys:
 | Field | Description |
 | --- | --- |
 | `link` |  |
-| `original_link` |  |
-| `short_link` |  |
+| `originalLink` |  |
+| `shortLink` |  |
 
 Operations: Create.
 
@@ -258,8 +259,8 @@ Create an instance: `url_shortening = client.UrlShortening`
 | Field | Type | Description |
 | --- | --- | --- |
 | `link` | `String` |  |
-| `original_link` | `String` |  |
-| `short_link` | `String` |  |
+| `originalLink` | `String` |  |
+| `shortLink` | `String` |  |
 
 #### Example: Create
 

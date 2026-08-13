@@ -23,6 +23,7 @@ require_once __DIR__ . '/MakeUrl.php';
 require_once __DIR__ . '/Param.php';
 require_once __DIR__ . '/PrepareAuth.php';
 require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
 require_once __DIR__ . '/PrepareHeaders.php';
 require_once __DIR__ . '/PrepareMethod.php';
 require_once __DIR__ . '/PrepareParams.php';
@@ -59,6 +60,8 @@ YaglaUrlShortenerUtility::setRegistrar(function (YaglaUrlShortenerUtility $u): v
     $u->prepare_params = [YaglaUrlShortenerPrepareParams::class, 'call'];
     $u->prepare_path = [YaglaUrlShortenerPreparePath::class, 'call'];
     $u->prepare_query = [YaglaUrlShortenerPrepareQuery::class, 'call'];
+    $u->graphql_body = [YaglaUrlShortenerGraphql::class, 'body'];
+    $u->graphql_errors = [YaglaUrlShortenerGraphql::class, 'errors'];
     $u->result_basic = [YaglaUrlShortenerResultBasic::class, 'call'];
     $u->result_body = [YaglaUrlShortenerResultBody::class, 'call'];
     $u->result_headers = [YaglaUrlShortenerResultHeaders::class, 'call'];
