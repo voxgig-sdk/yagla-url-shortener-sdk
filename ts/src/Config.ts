@@ -36,7 +36,7 @@ class Config {
 
 
   options = {
-    base: 'https://yagla.ru',
+    base: "https://yagla.ru",
 
     headers: {
       "content-type": "application/json"
@@ -55,25 +55,17 @@ class Config {
     "url_shortening": {
       "fields": [
         {
-          "active": true,
           "name": "link",
           "req": true,
-          "type": "`$STRING`",
-          "index$": 0
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "originalLink",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 1
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "shortLink",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 2
+          "type": "`$STRING`"
         }
       ],
       "name": "url_shortening",
@@ -83,7 +75,6 @@ class Config {
           "name": "create",
           "points": [
             {
-              "active": true,
               "args": {},
               "kind": "http",
               "method": "POST",
@@ -96,11 +87,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "create"
+          ]
         }
       },
       "relations": {

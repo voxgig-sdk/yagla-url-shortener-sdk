@@ -40,7 +40,7 @@ class YaglaUrlShortenerSDK
         $utility = new YaglaUrlShortenerUtility();
         $this->_utility = $utility;
 
-        $config = YaglaUrlShortenerConfig::make_config();
+        $config = YaglaUrlShortenerConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

@@ -28,7 +28,7 @@ class YaglaUrlShortenerSDK
     utility = YaglaUrlShortenerUtility.new
     @_utility = utility
 
-    config = YaglaUrlShortenerConfig.make_config
+    config = YaglaUrlShortenerConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

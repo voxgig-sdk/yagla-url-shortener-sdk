@@ -23,8 +23,8 @@ class YaglaUrlShortenerSDK:
         utility = YaglaUrlShortenerUtility()
         self._utility = utility
 
-        from yaglaurlshortener_sdk.config import make_config
-        config = make_config()
+        from yaglaurlshortener_sdk.config import shared_config
+        config = shared_config()
 
         self._rootctx = utility.make_context({
             "client": self,
