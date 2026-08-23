@@ -6,7 +6,7 @@ The Golang SDK for the YaglaUrlShortener API — an entity-oriented client using
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.UrlShortening(nil)` — each with the same small set of operations (`Create`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -258,9 +258,9 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"link"` |  |
-| `"originalLink"` |  |
-| `"shortLink"` |  |
+| `"link"` | The long URL to be shortened |
+| `"originalLink"` | The original long URL |
+| `"shortLink"` | The generated short URL |
 
 Operations: Create.
 
@@ -285,9 +285,9 @@ Create an instance: `urlShortening := client.UrlShortening(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `link` | `string` |  |
-| `originalLink` | `string` |  |
-| `shortLink` | `string` |  |
+| `link` | `string` | The long URL to be shortened |
+| `originalLink` | `string` | The original long URL |
+| `shortLink` | `string` | The generated short URL |
 
 #### Example: Create
 

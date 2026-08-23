@@ -226,9 +226,9 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `link` |  |
-| `originalLink` |  |
-| `shortLink` |  |
+| `link` | The long URL to be shortened |
+| `originalLink` | The original long URL |
+| `shortLink` | The generated short URL |
 
 Operations: Create.
 
@@ -253,9 +253,9 @@ Create an instance: `local url_shortening = client:UrlShortening(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `link` | `string` |  |
-| `originalLink` | `string` |  |
-| `shortLink` | `string` |  |
+| `link` | `string` | The long URL to be shortened |
+| `originalLink` | `string` | The original long URL |
+| `shortLink` | `string` | The generated short URL |
 
 #### Example: Create
 

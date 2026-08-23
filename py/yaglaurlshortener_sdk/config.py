@@ -28,6 +28,9 @@ def make_config():
     return {
         "main": {
             "name": "YaglaUrlShortener",
+            "slug": "yagla-url-shortener",
+            "version": "0.0.1",
+            "target": "py",
         },
         "feature": {
             "test": {
@@ -51,14 +54,17 @@ def make_config():
           {
             "name": "link",
             "req": True,
+            "short": "The long URL to be shortened",
             "type": "`$STRING`",
           },
           {
             "name": "originalLink",
+            "short": "The original long URL",
             "type": "`$STRING`",
           },
           {
             "name": "shortLink",
+            "short": "The generated short URL",
             "type": "`$STRING`",
           },
         ],

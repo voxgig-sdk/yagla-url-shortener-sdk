@@ -237,9 +237,9 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `link` |  |
-| `originalLink` |  |
-| `shortLink` |  |
+| `link` | The long URL to be shortened |
+| `originalLink` | The original long URL |
+| `shortLink` | The generated short URL |
 
 Operations: Create.
 
@@ -264,9 +264,9 @@ Create an instance: `url_shortening = client.UrlShortening()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `link` | `str` |  |
-| `originalLink` | `str` |  |
-| `shortLink` | `str` |  |
+| `link` | `str` | The long URL to be shortened |
+| `originalLink` | `str` | The original long URL |
+| `shortLink` | `str` | The generated short URL |
 
 #### Example: Create
 

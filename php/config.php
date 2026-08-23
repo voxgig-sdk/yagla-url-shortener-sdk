@@ -33,6 +33,9 @@ class YaglaUrlShortenerConfig
         return [
             "main" => [
                 "name" => "YaglaUrlShortener",
+                "slug" => "yagla-url-shortener",
+                "version" => "0.0.1",
+                "target" => "php",
             ],
             "feature" => [
                 "test" => [
@@ -56,14 +59,17 @@ class YaglaUrlShortenerConfig
             [
               'name' => 'link',
               'req' => true,
+              'short' => 'The long URL to be shortened',
               'type' => '`$STRING`',
             ],
             [
               'name' => 'originalLink',
+              'short' => 'The original long URL',
               'type' => '`$STRING`',
             ],
             [
               'name' => 'shortLink',
+              'short' => 'The generated short URL',
               'type' => '`$STRING`',
             ],
           ],

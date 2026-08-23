@@ -19,9 +19,20 @@ class Config {
     return fi
   }
 
+  // False for a feature added at runtime via options.extend (station's
+  // adopt path) - the constructor uses this to skip makeFeature for names
+  // no generated class backs.
+  hasFeature(this: any, fn: string) {
+    return null != FEATURE_CLASS[fn]
+  }
+
 
   main = {
     name: 'YaglaUrlShortener',
+        slug: "yagla-url-shortener",
+    version: "0.0.1",
+    target: "ts",
+
   }
 
 
@@ -57,14 +68,17 @@ class Config {
         {
           "name": "link",
           "req": true,
+          "short": "The long URL to be shortened",
           "type": "`$STRING`"
         },
         {
           "name": "originalLink",
+          "short": "The original long URL",
           "type": "`$STRING`"
         },
         {
           "name": "shortLink",
+          "short": "The generated short URL",
           "type": "`$STRING`"
         }
       ],

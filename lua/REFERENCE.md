@@ -90,9 +90,9 @@ local url_shortening = client:UrlShortening(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `link` | `string` | Yes |  |
-| `originalLink` | `string` | No |  |
-| `shortLink` | `string` | No |  |
+| `link` | `string` | Yes | The long URL to be shortened |
+| `originalLink` | `string` | No | The original long URL |
+| `shortLink` | `string` | No | The generated short URL |
 
 ### Operations
 

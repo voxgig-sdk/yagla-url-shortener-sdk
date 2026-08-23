@@ -231,9 +231,9 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `link` |  |
-| `originalLink` |  |
-| `shortLink` |  |
+| `link` | The long URL to be shortened |
+| `originalLink` | The original long URL |
+| `shortLink` | The generated short URL |
 
 Operations: Create.
 
@@ -258,9 +258,9 @@ Create an instance: `url_shortening = client.UrlShortening`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `link` | `String` |  |
-| `originalLink` | `String` |  |
-| `shortLink` | `String` |  |
+| `link` | `String` | The long URL to be shortened |
+| `originalLink` | `String` | The original long URL |
+| `shortLink` | `String` | The generated short URL |
 
 #### Example: Create
 

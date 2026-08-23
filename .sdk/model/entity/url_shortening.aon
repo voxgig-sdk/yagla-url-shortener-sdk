@@ -8,16 +8,19 @@ main: kit: entity: url_shortening: {
     {
       name: "link"
       req: true
+      short: "The long URL to be shortened"
       type: "`$STRING`"
     }
     {
       name: "originalLink"
       req: false
+      short: "The original long URL"
       type: "`$STRING`"
     }
     {
       name: "shortLink"
       req: false
+      short: "The generated short URL"
       type: "`$STRING`"
     }
   ]
