@@ -42,6 +42,7 @@ class YaglaUrlShortenerConfig
           'options' => [
             'active' => false,
           ],
+          'transport' => 'base',
         ],
             ],
             "options" => [

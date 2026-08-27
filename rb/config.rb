@@ -28,6 +28,7 @@ module YaglaUrlShortenerConfig
           "options" => {
             "active" => false,
           },
+          "transport" => "base",
         },
       },
       "options" => {
