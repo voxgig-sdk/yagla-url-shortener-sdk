@@ -58,17 +58,20 @@ class YaglaUrlShortenerConfig
         'url_shortening' => [
           'fields' => [
             [
+              'format' => 'uri',
               'name' => 'link',
               'req' => true,
               'short' => 'The long URL to be shortened',
               'type' => '`$STRING`',
             ],
             [
+              'format' => 'uri',
               'name' => 'originalLink',
               'short' => 'The original long URL',
               'type' => '`$STRING`',
             ],
             [
+              'format' => 'uri',
               'name' => 'shortLink',
               'short' => 'The generated short URL',
               'type' => '`$STRING`',
@@ -85,14 +88,22 @@ class YaglaUrlShortenerConfig
                   'kind' => 'http',
                   'method' => 'POST',
                   'orig' => '/tools/generateShortLink',
-                  'parts' => [
-                    'tools',
-                    'generateShortLink',
+                  'segments' => [
+                    [
+                      'lit' => 'tools',
+                    ],
+                    [
+                      'lit' => 'generateShortLink',
+                    ],
                   ],
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'tools',
+                    'generateShortLink',
                   ],
                 ],
               ],

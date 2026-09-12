@@ -52,7 +52,7 @@ func TestUrlShorteningEntity(t *testing.T) {
 		// CREATE
 		urlShorteningRef01Ent := client.UrlShortening(nil)
 		urlShorteningRef01Data := core.ToMapAny(vs.GetProp(
-			vs.GetPath([]any{"new", "url_shortening"}, setup.data), "url_shortening_ref01"))
+			vs.GetPath(setup.data, []any{"new", "url_shortening"}), "url_shortening_ref01"))
 
 		urlShorteningRef01DataResult, err := urlShorteningRef01Ent.Create(urlShorteningRef01Data, nil)
 		if err != nil {
@@ -90,7 +90,7 @@ func url_shorteningBasicSetup(extra map[string]any) *entityTestSetup {
 	client := sdk.TestSDK(options, extra)
 
 	// Generate idmap via transform, matching TS pattern.
-	idmap := vs.Transform(
+	idmap, _ := vs.Transform(
 		[]any{"url_shortening01", "url_shortening02", "url_shortening03"},
 		map[string]any{
 			"`$PACK`": []any{"", map[string]any{
@@ -118,10 +118,22 @@ func url_shorteningBasicSetup(extra map[string]any) *entityTestSetup {
 	}
 
 	if env["YAGLA_URL_SHORTENER_TEST_LIVE"] == "TRUE" {
+		// An empty map, not a nil one: Merge returns nil when its last entry
+		// is nil, and BasicSetup is normally called with no extras - so a
+		// bare nil silently discarded the apikey and server values below.
+		extraOpts := extra
+		if extraOpts == nil {
+			extraOpts = map[string]any{}
+		}
+
 		mergedOpts := vs.Merge([]any{
+			// liveClientOptions() FIRST, so the generated fields below win:
+			// sdk-test-control.json's test.client.options adds to the live
+			// client, it does not redirect it.
+			liveClientOptions(),
 			map[string]any{
 			},
-			extra,
+			extraOpts,
 		})
 		client = sdk.NewYaglaUrlShortenerSDK(core.ToMapAny(mergedOpts))
 	}

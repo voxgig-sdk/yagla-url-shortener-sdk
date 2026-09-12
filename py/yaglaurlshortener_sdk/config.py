@@ -1,6 +1,14 @@
 # YaglaUrlShortener SDK configuration
 
 
+# The sekreto plugin DEFINITIONS the model selected per feature, imported
+# above by name from the modules the catalogue's active `plugin.def`
+# entries declare. Handed to each feature (secrets builds its Sekreto
+# with them): a provider kind not listed here is unknown to that SDK.
+FEATURE_PLUGINS = {
+}
+
+
 _shared_config = None
 
 
@@ -53,17 +61,20 @@ def make_config():
       "url_shortening": {
         "fields": [
           {
+            "format": "uri",
             "name": "link",
             "req": True,
             "short": "The long URL to be shortened",
             "type": "`$STRING`",
           },
           {
+            "format": "uri",
             "name": "originalLink",
             "short": "The original long URL",
             "type": "`$STRING`",
           },
           {
+            "format": "uri",
             "name": "shortLink",
             "short": "The generated short URL",
             "type": "`$STRING`",
@@ -80,15 +91,23 @@ def make_config():
                 "kind": "http",
                 "method": "POST",
                 "orig": "/tools/generateShortLink",
-                "parts": [
-                  "tools",
-                  "generateShortLink",
+                "segments": [
+                  {
+                    "lit": "tools",
+                  },
+                  {
+                    "lit": "generateShortLink",
+                  },
                 ],
                 "select": {},
                 "transform": {
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "tools",
+                  "generateShortLink",
+                ],
               },
             ],
           },
