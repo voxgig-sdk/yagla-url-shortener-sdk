@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { YaglaUrlShortenerSDK } from '@voxgig-sdk/yagla-url-shortener'
+import { YaglaUrlShortenerSDK } from '@voxgig-sdk/yagla-url-shortener-sdk'
 
 const client = new YaglaUrlShortenerSDK()
 ```
@@ -404,7 +404,7 @@ yagla-url-shortener/
 Import the SDK from the package root:
 
 ```ts
-import { YaglaUrlShortenerSDK } from '@voxgig-sdk/yagla-url-shortener'
+import { YaglaUrlShortenerSDK } from '@voxgig-sdk/yagla-url-shortener-sdk'
 ```
 
 ### Entity state

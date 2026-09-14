@@ -107,7 +107,7 @@ local result, err = client:UrlShortening():create({ link = "example" })
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/releases) |
+| TypeScript | `@voxgig-sdk/yagla-url-shortener-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/releases) |
 | Python | `voxgig-sdk-yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/releases) |
 | PHP | `voxgig-sdk/yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/yagla-url-shortener-sdk/go` | `go get github.com/voxgig-sdk/yagla-url-shortener-sdk/go@latest` |
@@ -121,7 +121,7 @@ local result, err = client:UrlShortening():create({ link = "example" })
 ### TypeScript
 
 ```ts
-import { YaglaUrlShortenerSDK } from '@voxgig-sdk/yagla-url-shortener'
+import { YaglaUrlShortenerSDK } from '@voxgig-sdk/yagla-url-shortener-sdk'
 
 const client = new YaglaUrlShortenerSDK()
 
