@@ -4,7 +4,10 @@ declare(strict_types=1);
 // YaglaUrlShortener SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class YaglaUrlShortenerFeatures
@@ -14,8 +17,14 @@ class YaglaUrlShortenerFeatures
         switch ($name) {
             case "base":
                 return new YaglaUrlShortenerBaseFeature();
+            case "ratelimit":
+                return new YaglaUrlShortenerRatelimitFeature();
+            case "retry":
+                return new YaglaUrlShortenerRetryFeature();
             case "test":
                 return new YaglaUrlShortenerTestFeature();
+            case "timeout":
+                return new YaglaUrlShortenerTimeoutFeature();
             default:
                 return new YaglaUrlShortenerBaseFeature();
         }
@@ -31,7 +40,10 @@ class YaglaUrlShortenerFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;

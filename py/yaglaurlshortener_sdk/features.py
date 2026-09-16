@@ -1,12 +1,18 @@
 # YaglaUrlShortener SDK feature factory
 
 from yaglaurlshortener_sdk.feature.base_feature import YaglaUrlShortenerBaseFeature
+from yaglaurlshortener_sdk.feature.ratelimit_feature import YaglaUrlShortenerRatelimitFeature
+from yaglaurlshortener_sdk.feature.retry_feature import YaglaUrlShortenerRetryFeature
 from yaglaurlshortener_sdk.feature.test_feature import YaglaUrlShortenerTestFeature
+from yaglaurlshortener_sdk.feature.timeout_feature import YaglaUrlShortenerTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: YaglaUrlShortenerBaseFeature(),
+    "ratelimit": lambda: YaglaUrlShortenerRatelimitFeature(),
+    "retry": lambda: YaglaUrlShortenerRetryFeature(),
     "test": lambda: YaglaUrlShortenerTestFeature(),
+    "timeout": lambda: YaglaUrlShortenerTimeoutFeature(),
 }
 
 
