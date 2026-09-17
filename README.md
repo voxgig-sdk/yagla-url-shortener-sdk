@@ -107,12 +107,12 @@ local result, err = client:UrlShortening():create({ link = "example" })
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/yagla-url-shortener-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/releases) |
-| Python | `voxgig-sdk-yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/releases) |
-| PHP | `voxgig-sdk/yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/releases) |
+| TypeScript | `@voxgig-sdk/yagla-url-shortener-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
+| Python | `voxgig-sdk-yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
+| PHP | `voxgig-sdk/yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/yagla-url-shortener-sdk/go` | `go get github.com/voxgig-sdk/yagla-url-shortener-sdk/go@latest` |
-| Ruby | `voxgig-sdk-yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/releases) |
-| Lua | `voxgig-sdk-yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/releases) |
+| Ruby | `voxgig-sdk-yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
+| Lua | `voxgig-sdk-yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/yagla-url-shortener-sdk/go-cli` | `go install github.com/voxgig-sdk/yagla-url-shortener-sdk/go-cli/cmd/yagla-url-shortener@latest` |
 | Go MCP server | `github.com/voxgig-sdk/yagla-url-shortener-sdk/go-mcp` | `go get github.com/voxgig-sdk/yagla-url-shortener-sdk/go-mcp@latest` |
 
