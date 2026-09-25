@@ -24,38 +24,107 @@
         "repr": "auto"
       },
       "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
       "entity": {
         "url_shortening": {
           "active": true,
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "format": "uri",
-              "name": "link",
-              "req": true,
-              "short": "The long URL to be shortened",
-              "type": "`$STRING`"
+          "fields": {
+            "link": {
+              "a": true,
+              "fo": "uri",
+              "h": "Link",
+              "n": "link",
+              "r": true,
+              "sh": "The long URL to be shortened",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "format": "uri",
-              "name": "originalLink",
-              "req": false,
-              "short": "The original long URL",
-              "type": "`$STRING`"
+            "originalLink": {
+              "a": true,
+              "fo": "uri",
+              "h": "Original Link",
+              "n": "originalLink",
+              "r": false,
+              "sh": "The original long URL",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "format": "uri",
-              "name": "shortLink",
-              "req": false,
-              "short": "The generated short URL",
-              "type": "`$STRING`"
+            "shortLink": {
+              "a": true,
+              "fo": "uri",
+              "h": "Short Link",
+              "n": "shortLink",
+              "r": false,
+              "sh": "The generated short URL",
+              "t": "`$STRING`"
             }
-          ],
+          },
           "name": "url_shortening",
           "op": {
             "create": {
@@ -63,18 +132,19 @@
               "name": "create",
               "points": [
                 {
-                  "active": true,
-                  "args": {},
-                  "contract": {
+                  "a": true,
+                  "co": {
                     "id": "POST /tools/generateShortLink",
-                    "json": "{\"operationId\":\"generateShortLink\",\"parameters\":[],\"protocol\":\"http\",\"requestBody\":{\"content\":{\"application/json\":{\"examples\":{\"example1\":{\"summary\":\"Example URL shortening request\",\"value\":{\"link\":\"http://tvs.tv\"}}},\"schema\":{\"properties\":{\"link\":{\"description\":\"The long URL to be shortened\",\"example\":\"http://tvs.tv\",\"format\":\"uri\",\"type\":\"string\"}},\"required\":[\"link\"],\"type\":\"object\"}}},\"required\":true},\"responses\":{\"200\":{\"content\":{\"application/json\":{\"examples\":{\"example1\":{\"summary\":\"Successful response\",\"value\":{\"originalLink\":\"http://tvs.tv\",\"shortLink\":\"https://yagla.ru/abc123\"}}},\"schema\":{\"properties\":{\"originalLink\":{\"description\":\"The original long URL\",\"format\":\"uri\",\"type\":\"string\"},\"shortLink\":{\"description\":\"The generated short URL\",\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Successfully generated short link\"},\"400\":{\"content\":{\"application/json\":{\"examples\":{\"example1\":{\"summary\":\"Invalid URL\",\"value\":{\"error\":\"Invalid URL provided\"}}},\"schema\":{\"properties\":{\"error\":{\"description\":\"Error message describing what went wrong\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Bad Request - Invalid URL or missing parameters\"},\"500\":{\"content\":{\"application/json\":{\"examples\":{\"example1\":{\"summary\":\"Server error\",\"value\":{\"error\":\"Internal server error\"}}},\"schema\":{\"properties\":{\"error\":{\"description\":\"Error message\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Internal Server Error - Something went wrong on the server\"}},\"securitySource\":\"unspecified\"}",
                     "source": "openapi3",
-                    "version": 1
+                    "version": 2
                   },
-                  "kind": "http",
-                  "method": "POST",
-                  "orig": "/tools/generateShortLink",
-                  "segments": [
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/tools/generateShortLink",
+                  "q": {},
+                  "r": {},
+                  "s": [
                     {
                       "lit": "tools"
                     },
@@ -82,8 +152,7 @@
                       "lit": "generateShortLink"
                     }
                   ],
-                  "select": {},
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -512,15 +581,15 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {
+              "a": true,
+              "d": {},
+              "i": {
                 "ref": "url_shortening_ref01"
               },
-              "match": {},
-              "op": "create",
-              "spec": [],
-              "valid": []
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
             }
           ]
         }

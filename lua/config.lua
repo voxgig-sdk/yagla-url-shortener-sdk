@@ -86,23 +86,26 @@ local function make_config()
       ["url_shortening"] = {
         ["fields"] = {
           {
-            ["format"] = "uri",
             ["name"] = "link",
+            ["title"] = "Link",
+            ["type"] = "`$STRING`",
             ["req"] = true,
             ["short"] = "The long URL to be shortened",
-            ["type"] = "`$STRING`",
+            ["format"] = "uri",
           },
           {
-            ["format"] = "uri",
             ["name"] = "originalLink",
-            ["short"] = "The original long URL",
+            ["title"] = "Original Link",
             ["type"] = "`$STRING`",
+            ["short"] = "The original long URL",
+            ["format"] = "uri",
           },
           {
-            ["format"] = "uri",
             ["name"] = "shortLink",
-            ["short"] = "The generated short URL",
+            ["title"] = "Short Link",
             ["type"] = "`$STRING`",
+            ["short"] = "The generated short URL",
+            ["format"] = "uri",
           },
         },
         ["name"] = "url_shortening",
@@ -112,7 +115,6 @@ local function make_config()
             ["name"] = "create",
             ["points"] = {
               {
-                ["args"] = {},
                 ["kind"] = "http",
                 ["method"] = "POST",
                 ["orig"] = "/tools/generateShortLink",
@@ -124,15 +126,17 @@ local function make_config()
                     ["lit"] = "generateShortLink",
                   },
                 },
-                ["select"] = {},
-                ["transform"] = {
-                  ["req"] = "`reqdata`",
-                  ["res"] = "`body`",
-                },
                 ["parts"] = {
                   "tools",
                   "generateShortLink",
                 },
+                ["rename"] = {},
+                ["transform"] = {
+                  ["req"] = "`reqdata`",
+                  ["res"] = "`body`",
+                },
+                ["args"] = {},
+                ["select"] = {},
               },
             },
           },

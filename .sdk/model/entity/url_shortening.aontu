@@ -1,0 +1,66 @@
+# Entity: url_shortening
+
+main: kit: entity: url_shortening: {
+
+  alias: field: {}
+
+  fields: {
+    link: {
+      fo: "uri"
+      h: "Link"
+      n: "link"
+      r: true
+      sh: "The long URL to be shortened"
+      t: "`$STRING`"
+    }
+    originalLink: {
+      fo: "uri"
+      h: "Original Link"
+      n: "originalLink"
+      r: false
+      sh: "The original long URL"
+      t: "`$STRING`"
+    }
+    shortLink: {
+      fo: "uri"
+      h: "Short Link"
+      n: "shortLink"
+      r: false
+      sh: "The generated short URL"
+      t: "`$STRING`"
+    }
+  }
+
+  name: "url_shortening"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /tools/generateShortLink"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/tools/generateShortLink"
+          s: [
+            {
+              lit: "tools"
+            }
+            {
+              lit: "generateShortLink"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

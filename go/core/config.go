@@ -90,23 +90,26 @@ func MakeConfig() map[string]any {
 			"url_shortening": map[string]any{
 				"fields": []any{
 					map[string]any{
-						"format": "uri",
 						"name": "link",
+						"title": "Link",
+						"type": "`$STRING`",
 						"req": true,
 						"short": "The long URL to be shortened",
-						"type": "`$STRING`",
+						"format": "uri",
 					},
 					map[string]any{
-						"format": "uri",
 						"name": "originalLink",
-						"short": "The original long URL",
+						"title": "Original Link",
 						"type": "`$STRING`",
+						"short": "The original long URL",
+						"format": "uri",
 					},
 					map[string]any{
-						"format": "uri",
 						"name": "shortLink",
-						"short": "The generated short URL",
+						"title": "Short Link",
 						"type": "`$STRING`",
+						"short": "The generated short URL",
+						"format": "uri",
 					},
 				},
 				"name": "url_shortening",
@@ -116,7 +119,6 @@ func MakeConfig() map[string]any {
 						"name": "create",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{},
 								"kind": "http",
 								"method": "POST",
 								"orig": "/tools/generateShortLink",
@@ -128,15 +130,17 @@ func MakeConfig() map[string]any {
 										"lit": "generateShortLink",
 									},
 								},
-								"select": map[string]any{},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body`",
-								},
 								"parts": []any{
 									"tools",
 									"generateShortLink",
 								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{},
+								"select": map[string]any{},
 							},
 						},
 					},

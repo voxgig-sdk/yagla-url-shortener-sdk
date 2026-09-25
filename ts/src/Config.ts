@@ -16,12 +16,6 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS: Record<string, any[]> = {
   
 }
@@ -32,7 +26,6 @@ class Config {
   makeFeature(this: any, fn: string) {
     const fc = FEATURE_CLASS[fn]
     const fi = new fc()
-    // TODO: errors etc
     return fi
   }
 
@@ -138,23 +131,26 @@ class Config {
     "url_shortening": {
       "fields": [
         {
-          "format": "uri",
           "name": "link",
+          "title": "Link",
+          "type": "`$STRING`",
           "req": true,
           "short": "The long URL to be shortened",
-          "type": "`$STRING`"
+          "format": "uri"
         },
         {
-          "format": "uri",
           "name": "originalLink",
+          "title": "Original Link",
+          "type": "`$STRING`",
           "short": "The original long URL",
-          "type": "`$STRING`"
+          "format": "uri"
         },
         {
-          "format": "uri",
           "name": "shortLink",
+          "title": "Short Link",
+          "type": "`$STRING`",
           "short": "The generated short URL",
-          "type": "`$STRING`"
+          "format": "uri"
         }
       ],
       "name": "url_shortening",
@@ -164,7 +160,6 @@ class Config {
           "name": "create",
           "points": [
             {
-              "args": {},
               "kind": "http",
               "method": "POST",
               "orig": "/tools/generateShortLink",
@@ -176,15 +171,17 @@ class Config {
                   "lit": "generateShortLink"
                 }
               ],
-              "select": {},
+              "parts": [
+                "tools",
+                "generateShortLink"
+              ],
+              "rename": {},
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "parts": [
-                "tools",
-                "generateShortLink"
-              ]
+              "args": {},
+              "select": {}
             }
           ]
         }
