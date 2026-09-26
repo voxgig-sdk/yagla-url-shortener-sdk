@@ -108,11 +108,11 @@ local result, err = client:UrlShortening():create({ link = "example" })
 | Language | Package | Install |
 | --- | --- | --- |
 | TypeScript | `@voxgig-sdk/yagla-url-shortener-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
-| Python | `voxgig-sdk-yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
-| PHP | `voxgig-sdk/yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
+| Python | `voxgig-sdk-yagla-url-shortener-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
+| PHP | `voxgig-sdk/yagla-url-shortener-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/yagla-url-shortener-sdk/go` | `go get github.com/voxgig-sdk/yagla-url-shortener-sdk/go@latest` |
-| Ruby | `voxgig-sdk-yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
-| Lua | `voxgig-sdk-yagla-url-shortener` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
+| Ruby | `voxgig-sdk-yagla-url-shortener-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
+| Lua | `voxgig-sdk-yagla-url-shortener-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/yagla-url-shortener-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/yagla-url-shortener-sdk/go-cli` | `go install github.com/voxgig-sdk/yagla-url-shortener-sdk/go-cli/cmd/yagla-url-shortener@latest` |
 | Go MCP server | `github.com/voxgig-sdk/yagla-url-shortener-sdk/go-mcp` | `go get github.com/voxgig-sdk/yagla-url-shortener-sdk/go-mcp@latest` |
 
@@ -317,10 +317,10 @@ forking the SDK.
 
 | Feature | Purpose |
 | --- | --- |
-| **RatelimitFeature** | Client-side rate limiting via a token bucket |
-| **RetryFeature** | Automatic retry of transient failures with exponential backoff |
-| **TestFeature** | In-memory mock transport for testing without a live server |
-| **TimeoutFeature** | Per-request timeout with transport abort |
+| **RatelimitFeature** | Rate limiting |
+| **RetryFeature** | Retry |
+| **TestFeature** | Test transport |
+| **TimeoutFeature** | Timeout |
 
 Pass custom features via the `extend` option at construction time.
 
